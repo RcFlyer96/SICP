@@ -1,0 +1,21 @@
+(define (fuc-f number)
+  (if (< number 3) 
+      number
+  (ff number 0 0))
+)
+
+;(define (ff number count)
+;  (display number)
+;  (display count)
+;  (newline)
+;  (cond ((> count 2) (* number count))
+;        (else (+ (* number count) (ff (- number 1) (+ count 1))))
+;)
+
+(define (ff number count product)
+  ;(display number)
+  ;(display count)
+  ;(newline)
+  (cond ((> count 3) (display product))
+        (else (ff (- number 1) (+ count 1) (+ (* number count) product))))
+)
