@@ -1,0 +1,16 @@
+(define (fib n)
+  (define (iter x)
+    (cond ((= x 0) 0)
+          ((= x 1) 1)
+          (else (+ (iter (- x 1))
+                   (iter (- x 2)))))
+  )
+  
+  ;(define (fib-step npo)
+  ;  )
+  
+  (display (iter n))
+  (display " ")
+  (display (iter (+ n 1)))
+  ;(display "made it!")
+)
